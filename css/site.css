@@ -34,9 +34,13 @@ body {
     background-repeat: no-repeat;
     color: white;
     background-image: url(../Images/Background.jpeg);
-    /* background-image: linear-gradient(rgb(1, 0, 77), black);
-    background-image: linear-gradient(rgb(238, 206, 100), rgb(168, 111, 5)); */
 
+}
+
+ul{
+    list-style-type: none;
+    padding: 0%;
+    font-size: medium;
 }
 
 button:hover {
@@ -49,4 +53,9 @@ button:hover {
 
 .text-center {
     text-align: center;
+}
+
+.Info-Container {
+    margin: auto;
+    width: 50%;
 }
