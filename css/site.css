@@ -41,8 +41,8 @@ body {
 }
 
 ul {
-    list-style-type: none;
-    padding: 0%;
+    padding-left: 3em;
+    list-style-type: disc;
 }
 
 button:hover {
@@ -53,13 +53,10 @@ button:hover {
     margin: auto auto;
 }
 
-.text-center {
-    text-align: center;
-}
-
 .Info-Container {
-    width: 50vh;
+    width: 50vw;
     background-color: #d0cbcb;
     margin: 2% auto;
-    padding: 2%
+    padding: 2%;
+    box-shadow: 12px 12px 5px black;
 }
