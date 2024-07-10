@@ -1,5 +1,5 @@
 :root {
-    --bg: #d0cbcb;
+    --bg: #2f4e63;
     --text: black;
 }
 
@@ -58,6 +58,8 @@ button:hover {
 }
 
 .Info-Container {
-    margin: auto;
-    width: 50%;
+    width: 30%;
+    background-color: #d0cbcb;
+    margin: 2% auto;
+    padding: 2%
 }
