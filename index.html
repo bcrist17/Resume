@@ -3,93 +3,137 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/site.css" />
-    <link rel="stylesheet" href="css/messaging.css" />
 </head>
 <body>
+    <div id="scrolling" class="hidden">not scrolling</div>
+    <div id="sideBar">
+        <div id="sideBar-title">
+            <b>Ben Crist</b>
+        </div>
+        <b>
+            <ul id="sideBar-list">
+                <li class="sideBar-item sidebar-current" id="info-sidebar">
+                    &ensp;<i class="fa-regular fa-address-book"></i>
+                    Personal Info
+                </li>
+                <li class="sideBar-item" id="about-me-sidebar">
+                    &ensp;<i class="fa-solid fa-user"></i>
+                    About Me
+                </li>
+                <li class="sideBar-item" id="work-experience-sidebar">
+                    &ensp;<i class="fa-solid fa-briefcase"></i>
+                    Work experience
+                </li>
+                <li class="sideBar-item" id="computer-skills-sidebar">
+                    &ensp;<i class="fa-solid fa-database"></i>
+                    Computer Skills
+                </li>
+                <li class="sideBar-item" id="coursework-sidebar">
+                    &ensp;<i class="fa-solid fa-book"></i>
+                    Relevant coursework
+                </li>
+                <li class="sideBar-item" id="awards-sidebar">
+                    &ensp;<i class="fa-solid fa-award"></i>
+                    Awards/Achievements
+                </li>
+                <li class="sideBar-item" id="education-sidebar">
+                    &ensp;<i class="fa-solid fa-school"></i>
+                    Education
+                </li>
+            </ul>
+        </b>
+    </div>
     <div class="container">
-        <div id="container">
-            <div class="Info-Container" id="Contact-Info">
-                <h2>Contact Info</h2>
-                <p>&emsp; &emsp; Email: ben.crist070@gmail.com</p>
-                <p>&emsp; &emsp; Phone: (402)-580-9372</p>
-                <p>
-                    &emsp; &emsp; Linkedin:
-                    <a href="https://www.linkedin.com/in/ben-crist-a4a7a7255/">Ben Crist</a>
-                </p>
-            </div>
-            <div class="Info-Container " id="About-Me">
-                <h2>About Me</h2>
-                <p>
-                    Highly motivated computer and electrical engineer seeking to leverage my education in computer science and
-                    engineering, including C, scripting languages, web development, and data structures, into a role as a software
-                    developer. A dedicated and hard worker who is passionate about the future of computer technology and engineering.
-                </p>
-            </div>
-            <div class="Info-Container" id="Work-Experience">
-                <h2>Work Experience</h2>
-                <b>Sandhills Global - Lincoln, Nebraska</b>
-                <p><b>Software Developer Intern</b>, Summer 2023 - Current</p>
-                <ul>
-                    <li>Modified existing software to correct errors, and implement upgrades to the software</li>
-                    <li>Developed object-oriented web applications using C# programming language</li>
-                    <li>Assessed code during testing stage to determine potential glitches and bugs</li>
-                    <li>Resolved front-end and back-end problems for internal applications</li>
-                    <li>Leveraged multitasking abilities to effectively complete concurrent time-sensitive assignments</li>
-                </ul>
-                <br>
-                <b>Parker's SmokeHouse - Ashland, Nebraska</b>
-                <p><b>Service Department- Server</b>, 2021-2023</p>
-                <ul >
-                    <li>Operate POS terminals to input customer orders and handle financial transactions for 120+ seat restaurant</li>
-                    <li>Ensure attention to detail and comprehensive understanding of restaurant methodology and practices</li>
-                    <li>Obtain and share intricate knowledge of menu with patrons</li>
-                    <li>Employ multitasking skills to balance the needs of up to 20 clients</li>
-                    <li>Demonstrate relentless dedication customer service skills and accurate delivery of all orders</li>
-                </ul>
-            </div>
-            <div class=" Info-Container" id="Computer-Skills">
-                <h2>Computer Skills</h2>
-                <p><b>Computer Languages:</b> React, Javascript, HTML, CSS, C#, ASP.NET, VB.NET, C, Assembly Language, Verilog, Python, VBA</p>
-                <p><b>Software and Database:</b> SQL, Visual Studio Code, PyCharm, Visual Studio, Microsoft Office Word, Excel, PowerPoint, Maple </p>
-                <p><b>Operating Systems:</b> Windows, iOS</p>
-            </div>
-            <div class=" Info-Container" id="Coursework">
-                <h2>Relevant Coursework</h2>
-                <ul>
-                    <li>Computer Science</li>
-                    <li>Operating Systems</li>
-                    <li>Data Structures and Algorithms</li>
-                    <li>Microprocessor Applications and Design</li>
-                    <li>Electronics and Computer Engineering</li>
-                    <li>Electronic Circuits</li>
-                </ul>
-            </div>
-            <div class=" Info-Container" id="Awards">
-                <h2>Awards/Achievements</h2>
-                <ul>
-                    <li>Dean’s Scholarship (Fall 2021-Spring 2023)</li>
-                    <li>Nebraska Career Scholarship (Fall 2023-Present)</li>
-                    <li>Member of HKN (IEEE honors society)</li>
-                    <li>Nebraska Career Award</li>
-                    <li> Dean’s List (Fall 2021-Present)</li>
-                    <li>2x Completion of Market to Market Run</li>
-                    <li>Cofounder of student organization at Pius</li>
-                </ul>
-            </div>
-            <div class="Info-Container" id="Education">
-                <h2><u>Education</u></h2>
-                <p><b>University of Nebraska – Lincoln, Nebraska</b></p>
-                <p>&emsp; &emsp; &#x2022; Bachelor of Science in Computer Engineering</p>
-                <p>&emsp; &emsp; &emsp; - Minor in Mathematics</p>
-                <p>&emsp; &emsp; &#x2022; Bachelor of Science in Electrical Engineering</p>
-                <p>&emsp; &emsp; &emsp; - Minor in Computer Science</p>
-                <p>&emsp; &emsp; Expected Graduation 2025 | Current GPA: 3.792</p>
-                <br>
-                <p><b>Pius X High School Lincoln, Nebraska</b></p>
-                <p>&emsp; &emsp; High School Diploma</p>
-                <p>&emsp; &emsp; Graduated 2021 - GPA: 3.910<p />
-            </div>
+        <div class="Info-Container hidden" id="title">
+            <b>Ben Crist</b>
+        </div>
+        <div class="Info-Container" id="Info">
+            <h2>Personal Info</h2>
+            <p>&emsp; &emsp; <i class="fa-solid fa-envelope"></i> Email: ben.crist070@gmail.com</p>
+            <p>&emsp; &emsp; <i class="fa-solid fa-phone"></i> Phone: (402)-580-9372</p>
+            <p>
+                &emsp; &emsp; <i class="fa-brands fa-linkedin"></i> Linkedin:
+                <a href="https://www.linkedin.com/in/ben-crist-a4a7a7255/">Ben Crist</a>
+            </p>
+            <p>
+                &emsp; &emsp; <i class="fa-brands fa-github"></i> Github Profiles:
+                <a href="https://github.com/bcrist17">Personal</a>
+                &emsp;<a href="https://github.com/bcrist3">School</a>
+            </p>
+        </div>
+        <div class="Info-Container " id="About-Me">
+            <h2>About Me</h2>
+            <p>
+                Highly motivated computer and electrical engineer seeking to leverage my education in computer science and
+                engineering, including C, scripting languages, web development, and data structures, into a role as a software
+                developer. A dedicated and hard worker who is passionate about the future of computer technology and engineering.
+             </p>
+         </div>
+         <div class="Info-Container" id="Work-Experience">
+             <h2>Work Experience</h2>
+              <b><u>Sandhills Global</u> - Lincoln, Nebraska</b>
+               <p><b>Software Developer Intern</b>, Summer 2023 - Current</p>
+               <ul>
+                <li>Modified existing software to correct errors, and implement upgrades to the software</li>
+                <li>Developed object-oriented web applications using C# programming language</li>
+                <li>Assessed code during testing stage to determine potential glitches and bugs</li>
+                <li>Resolved front-end and back-end problems for internal applications</li>
+                <li>Leveraged multitasking abilities to effectively complete concurrent time-sensitive assignments</li>
+            </ul>
+            <br>
+            <b><u>Parker's SmokeHouse</u> - Ashland, Nebraska</b>
+            <p><b>Service Department- Server</b>, 2021-2023</p>
+            <ul>
+                <li>Operate POS terminals to input customer orders and handle financial transactions for 120+ seat restaurant</li>
+                <li>Ensure attention to detail and comprehensive understanding of restaurant methodology and practices</li>
+                <li>Obtain and share intricate knowledge of menu with patrons</li>
+                <li>Employ multitasking skills to balance the needs of up to 20 clients</li>
+                <li>Demonstrate relentless dedication customer service skills and accurate delivery of all orders</li>
+            </ul>
+        </div>
+        <div class=" Info-Container" id="Computer-Skills">
+            <h2>Computer Skills</h2>
+            <p><b>Computer Languages:</b> React, Javascript, HTML, CSS, C#, ASP.NET, VB.NET, C, Assembly Language, Verilog, Python, VBA</p>
+            <p><b>Software and Database:</b> SQL, Visual Studio Code, PyCharm, Visual Studio, Microsoft Office Word, Excel, PowerPoint, Maple </p>
+            <p><b>Operating Systems:</b> Windows, iOS</p>
+        </div>
+        <div class=" Info-Container" id="Coursework">
+            <h2>Relevant Coursework</h2>
+            <ul>
+                <li>Computer Science</li>
+                <li>Operating Systems</li>
+                <li>Data Structures and Algorithms</li>
+                <li>Microprocessor Applications and Design</li>
+                <li>Electronics and Computer Engineering</li>
+                <li>Electronic Circuits</li>
+            </ul>
+        </div>
+        <div class=" Info-Container" id="Awards">
+            <h2>Awards/Achievements</h2>
+            <ul>
+                <li>Dean’s Scholarship (Fall 2021-Spring 2023)</li>
+                <li>Nebraska Career Scholarship (Fall 2023-Present)</li>
+                <li>Member of HKN (IEEE honors society)</li>
+                <li>Nebraska Career Award</li>
+                <li> Dean’s List (Fall 2021-Present)</li>
+                <li>2x Completion of Market to Market Run</li>
+                <li>Cofounder of student organization at Pius</li>
+            </ul>
+        </div>
+        <div class="Info-Container" id="Education">
+            <h2>Education</h2>
+            <p><b>University of Nebraska – Lincoln, Nebraska</b></p>
+            <p>&emsp; &emsp; Bachelor of Science in Computer Engineering</p>
+            <p>&emsp; &emsp; &emsp; - Minor in Mathematics</p>
+            <p>&emsp; &emsp; Bachelor of Science in Electrical Engineering</p>
+            <p>&emsp; &emsp; &emsp; - Minor in Computer Science</p>
+            <p>&emsp; &emsp; Expected Graduation 2025 | Current GPA: 3.792</p>
+            <br>
+            <p><b>Pius X High School Lincoln, Nebraska</b></p>
+            <p>&emsp; &emsp; High School Diploma</p>
+            <p>&emsp; &emsp; Graduated 2021 | GPA: 3.910</p>
         </div>
     </div>
     <script src="js/site.js"></script>
