@@ -10,43 +10,43 @@
 document.getElementById("info-sidebar").addEventListener("click", function() {
     CurrentClass(this);
     document.getElementById("Info").scrollIntoView({ behavior: 'smooth' });
-    document.getElementById("scrolling").innerHTML == "not scrolling";
+    document.getElementById("scrolling").innerHTML = "not scrolling";
 });
 
 document.getElementById("about-me-sidebar").addEventListener("click", function() {
     CurrentClass(this);
     document.getElementById("About-Me").scrollIntoView({ behavior: 'smooth' });
-    document.getElementById("scrolling").innerHTML == "not scrolling";
+    document.getElementById("scrolling").innerHTML = "not scrolling";
 });
 
 document.getElementById("work-experience-sidebar").addEventListener("click", function() {
     CurrentClass(this);
     document.getElementById("Work-Experience").scrollIntoView({ behavior: 'smooth' });
-    document.getElementById("scrolling").innerHTML == "not scrolling";
+    document.getElementById("scrolling").innerHTML = "not scrolling";
 });
 
 document.getElementById("computer-skills-sidebar").addEventListener("click", function() {
     CurrentClass(this);
     document.getElementById("Computer-Skills").scrollIntoView({ behavior: 'smooth' });
-    document.getElementById("scrolling").innerHTML == "not scrolling";
+    document.getElementById("scrolling").innerHTML = "not scrolling";
 });
 
 document.getElementById("coursework-sidebar").addEventListener("click", function() {
     CurrentClass(this);
     document.getElementById("Coursework").scrollIntoView({ behavior: 'smooth' });
-    document.getElementById("scrolling").innerHTML == "not scrolling";
+    document.getElementById("scrolling").innerHTML = "not scrolling";
 });
 
 document.getElementById("awards-sidebar").addEventListener("click", function() {
     CurrentClass(this);
     document.getElementById("Awards").scrollIntoView({ behavior: 'smooth' });
-    document.getElementById("scrolling").innerHTML == "not scrolling";
+    document.getElementById("scrolling").innerHTML = "not scrolling";
 });
 
 document.getElementById("education-sidebar").addEventListener("click", function() {
     CurrentClass(this);
     document.getElementById("Education").scrollIntoView({ behavior: 'smooth' });
-    document.getElementById("scrolling").innerHTML == "not scrolling";
+    document.getElementById("scrolling").innerHTML = "not scrolling";
 });
 
 document.addEventListener('scroll', function() {
