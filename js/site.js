@@ -69,7 +69,7 @@ document.addEventListener('scroll', function() {
     }
 });
 
-window.addEventListener('resize', function() {
+function resize(){
     if (window.innerWidth <= 750){
         document.getElementById("sideBar").classList.add("hidden");
         document.getElementById("title").classList.remove("hidden");
@@ -78,4 +78,8 @@ window.addEventListener('resize', function() {
         document.getElementById("sideBar").classList.remove("hidden");
         document.getElementById("title").classList.add("hidden");
     }
-});
+}
+
+window.addEventListener('load', resize);
+
+window.addEventListener('resize', resize);
