@@ -1,56 +1,25 @@
-﻿function CurrentClass(element){
-    document.getElementById("scrolling").innerHTML = "scrolling";
+﻿var wait = false;
+
+function RemoveSidebarClass(element){
     var options = document.querySelectorAll('#sideBar-list li');
     options.forEach(function(option) {
         option.classList.remove('sidebar-current');
     });
-    element.classList.add('sidebar-current');
 }
 
-document.getElementById("info-sidebar").addEventListener("click", function() {
-    CurrentClass(this);
-    document.getElementById("Info").scrollIntoView({ behavior: 'smooth' });
-    document.getElementById("scrolling").innerHTML = "not scrolling";
-});
-
-document.getElementById("about-me-sidebar").addEventListener("click", function() {
-    CurrentClass(this);
-    document.getElementById("About-Me").scrollIntoView({ behavior: 'smooth' });
-    document.getElementById("scrolling").innerHTML = "not scrolling";
-});
-
-document.getElementById("work-experience-sidebar").addEventListener("click", function() {
-    CurrentClass(this);
-    document.getElementById("Work-Experience").scrollIntoView({ behavior: 'smooth' });
-    document.getElementById("scrolling").innerHTML = "not scrolling";
-});
-
-document.getElementById("computer-skills-sidebar").addEventListener("click", function() {
-    CurrentClass(this);
-    document.getElementById("Computer-Skills").scrollIntoView({ behavior: 'smooth' });
-    document.getElementById("scrolling").innerHTML = "not scrolling";
-});
-
-document.getElementById("coursework-sidebar").addEventListener("click", function() {
-    CurrentClass(this);
-    document.getElementById("Coursework").scrollIntoView({ behavior: 'smooth' });
-    document.getElementById("scrolling").innerHTML = "not scrolling";
-});
-
-document.getElementById("awards-sidebar").addEventListener("click", function() {
-    CurrentClass(this);
-    document.getElementById("Awards").scrollIntoView({ behavior: 'smooth' });
-    document.getElementById("scrolling").innerHTML = "not scrolling";
-});
-
-document.getElementById("education-sidebar").addEventListener("click", function() {
-    CurrentClass(this);
-    document.getElementById("Education").scrollIntoView({ behavior: 'smooth' });
-    document.getElementById("scrolling").innerHTML = "not scrolling";
+document.body.addEventListener("click", function(event) {
+    if (event.target.classList.contains("sideBar-item")) {
+        wait = true;
+        var currentSidebarElement = event.target.id;
+        RemoveSidebarClass();
+        var currentElement = currentSidebarElement.replace("-sidebar", "");
+        document.getElementById(currentElement).scrollIntoView({ behavior: 'instant' });
+        document.getElementById(currentSidebarElement).classList.add('sidebar-current');
+    }
 });
 
 document.addEventListener('scroll', function() {
-    if(document.getElementById("scrolling").innerHTML === "not scrolling"){
+    if (!wait){
         var sections = document.querySelectorAll('.Info-Container');
         var options = document.querySelectorAll('#sideBar-list li');
         var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
@@ -61,11 +30,14 @@ document.addEventListener('scroll', function() {
 
             if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
                 options.forEach(function(option) {
-                option.classList.remove('sidebar-current');
+                    option.classList.remove('sidebar-current');
                 });
                 document.querySelector('#' + section.id.toLowerCase() + '-sidebar').classList.add('sidebar-current');
             }
         });
+    }
+    else{
+        wait = false;
     }
 });
 
