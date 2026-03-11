@@ -1,57 +1,32 @@
 ﻿var wait = false;
 
-function RemoveSidebarClass(element){
-    var options = document.querySelectorAll('#sideBar-list li');
-    options.forEach(function(option) {
-        option.classList.remove('sidebar-current');
-    });
+function RemoveSidebarClass() {
+    document.querySelectorAll('#sideBar-list li')
+        .forEach(li => li.classList.remove('sidebar-current'));
 }
 
 document.body.addEventListener("click", function(event) {
-    if (event.target.classList.contains("sideBar-item")) {
-        wait = true;
-        var currentSidebarElement = event.target.id;
-        RemoveSidebarClass();
-        var currentElement = currentSidebarElement.replace("-sidebar", "");
-        document.getElementById(currentElement).scrollIntoView({ behavior: 'instant' });
-        document.getElementById(currentSidebarElement).classList.add('sidebar-current');
-    }
+    const item = event.target.closest(".sideBar-item");
+    if (!item) return;
+
+    wait = true;
+    RemoveSidebarClass();
+    item.classList.add("sidebar-current");
+
+    const target = item.id.replace("-sidebar", "");
+    document.getElementById(target).scrollIntoView({ behavior: "smooth" });
 });
 
-document.addEventListener('scroll', function() {
-    if (!wait){
-        var sections = document.querySelectorAll('.Info-Container');
-        var options = document.querySelectorAll('#sideBar-list li');
-        var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+document.addEventListener("scroll", () => {
+    if (wait) return wait = false;
 
-        sections.forEach(function(section, index) {
-            var sectionTop = section.offsetTop;
-            var sectionHeight = section.offsetHeight;
-
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                options.forEach(function(option) {
-                    option.classList.remove('sidebar-current');
-                });
-                document.querySelector('#' + section.id.toLowerCase() + '-sidebar').classList.add('sidebar-current');
-            }
-        });
-    }
-    else{
-        wait = false;
-    }
+    document.querySelectorAll(".Info-Container").forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < 150 && rect.bottom > 150) {
+            RemoveSidebarClass();
+            const link = document.getElementById(section.id + "-sidebar");
+            if (link) link.classList.add("sidebar-current");
+        }
+    });
 });
 
-function resize(){
-    if (window.innerWidth <= 750){
-        document.getElementById("sideBar").classList.add("hidden");
-        document.getElementById("title").classList.remove("hidden");
-    }
-    else{
-        document.getElementById("sideBar").classList.remove("hidden");
-        document.getElementById("title").classList.add("hidden");
-    }
-}
-
-window.addEventListener('load', resize);
-
-window.addEventListener('resize', resize);
